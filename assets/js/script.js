@@ -128,3 +128,5 @@ $(document).ready(function () {
     // Optionally, trigger the first step on page load
     $('.step').first().click();
 });
+
+
