@@ -128,3 +128,17 @@ $(document).ready(function () {
     // Optionally, trigger the first step on page load
     $('.step').first().click();
 });
+
+
+
+
+// 
+$(document).ready(function() {
+    $('.plan-btn').click(function() {
+        var planId = $(this).data('plan');
+        $('.plan-content').removeClass('active');
+        $('#' + planId).addClass('active');
+        $('.plan-btn').removeClass('active');
+        $(this).addClass('active');
+    });
+});

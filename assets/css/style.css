@@ -392,8 +392,10 @@
   }
 
 /* ID 3 start */
-.main-section-3{
+.content-section-3 .main-section-3 {
     background-image: url("assets/image/cover.png");
+    background-position: center center;
+    background-repeat: no-repeat;
     height: 200px;
     width: auto;
     h1{
@@ -402,4 +404,61 @@
             color: yellow;
         }
     }
+}
+.collapse-btn{
+    border: 1px solid gray;
+}
+
+.plan-btn {
+    cursor: pointer;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.plan-btn:hover, .plan-btn.active {
+    background-color: #e9ecef;
+}
+.plan-content {
+
+    display: none;
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    h2{
+        font-size: 18px;
+        color: #0fa582;
+        span{
+            color: red;
+        }
+    }
+}
+.plan-content.active {
+    display: block;
+}
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.card-text {
+    font-size: 1rem;
+}
+.text-danger {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.text-muted {
+    font-size: 1rem;
+}
+.btn-custom {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
 }
