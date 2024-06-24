@@ -304,6 +304,8 @@
 
 /* *******************  Registration  ************** */
 .Registration {
+    margin-left: 40px;
+    padding: 0px;
     label img {
         width: 52px;
         height: 77px;
@@ -321,10 +323,12 @@
 }
 
 .Find_car {
+    padding: 0px;
+
     button {
         background-color: #0fa582;
         color: white;
-        font-size: 18px;
+        font-size: 10px;
         padding: 10px;
         border: none;
         border-radius: 10px;
