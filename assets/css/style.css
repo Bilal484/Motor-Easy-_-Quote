@@ -386,3 +386,16 @@
     height: 40px;
     margin-right: 10px;
   }
+
+/* ID 3 start */
+.main-section-3{
+    background-image: url("assets/image/cover.png");
+    height: 200px;
+    width: auto;
+    h1{
+        font-size: 29px;
+        span{
+            color: yellow;
+        }
+    }
+}
