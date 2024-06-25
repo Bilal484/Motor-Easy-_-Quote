@@ -3,154 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Warranty Plans</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <title>Toggle Content</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .plan-btn {
-            cursor: pointer;
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 0.25rem;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-        .plan-btn:hover, .plan-btn.active {
-            background-color: #e9ecef;
-        }
-        .plan-content {
+        .content-section-main {
             display: none;
-            background-color: #ffffff;
-            padding: 1rem;
-            border: 1px solid #dee2e6;
-            border-radius: 0.25rem;
-            margin-top: 1rem;
-        }
-        .plan-content.active {
-            display: block;
-        }
-        .card-title {
-            font-size: 1.25rem;
-            font-weight: bold;
-        }
-        .card-text {
-            font-size: 1rem;
-        }
-        .text-danger {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .text-muted {
-            font-size: 1rem;
-        }
-        .btn-custom {
-            background-color: #28a745;
-            color: #ffffff;
-            border: none;
-            padding: 0.75rem 1.25rem;
-            font-size: 1rem;
-            border-radius: 0.25rem;
-            margin-top: 1rem;
         }
     </style>
 </head>
 <body>
-    <div id="content3" class="content-section-3">
-        <div class="main-section-3">
-            <div class="container">
-                <div class="row h-100">
-                    <div class="col-lg-8 text-dark d-flex align-items-start justify-content-start flex-column">
-                        <h1>
-                            Choose the best warranty cover for your Alpina -
-                            <span> including your 11% saving</span>
-                        </h1>
-                        <p>
-                            IMPORTANT: This offer cannot be used in conjunction
-                            with any other offer.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <h3 class="fw-bold">Choose a plan to suit you below:</h3>
-        <div class="collapse-section">
-            <div class="container mt-5">
-                <h2>Choose a plan to suit you below:</h2>
-                <div class="row mb-3">
-                    <div class="col-md-3">
-                        <div class="plan-btn card text-center" data-plan="planA">
-                            <div class="card-body">
-                                <h5 class="card-title">Plan A</h5>
-                                <p class="card-text"><span class="text-danger">£36.44</span> <small class="text-muted"><del>£40.94</del></small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="plan-btn card text-center" data-plan="planALite">
-                            <div class="card-body">
-                                <h5 class="card-title">Plan A Lite</h5>
-                                <p class="card-text"><span class="text-danger">£21.56</span> <small class="text-muted"><del>£24.22</del></small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="plan-btn card text-center" data-plan="planC">
-                            <div class="card-body">
-                                <h5 class="card-title">Plan C</h5>
-                                <p class="card-text"><span class="text-danger">£32.22</span> <small class="text-muted"><del>£36.20</del></small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="plan-btn card text-center" data-plan="planCLite">
-                            <div class="card-body">
-                                <h5 class="card-title">Plan C Lite</h5>
-                                <p class="card-text"><span class="text-danger">£19.91</span> <small class="text-muted"><del>£22.37</del></small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="plan-content active" id="planA">
-                    <p>Not sure – Buy today and we will upgrade the plan in future if you wish! Our economical alternative to Plan C warranty cover for breakdowns on the road that need recovery.</p>
-                    <p>Comprehensive car warranty cover for your 2020 ABARTH 124 GT MULTIAIR at a lower price.</p>
-                    <p>Valid on mechanical and electrical faults, if you are away from home and your car is towed to a garage, Plan C Lite offers you the same protection for repair bills as Plan C. Simply report repairs via your <a href="#">MotorEasy account</a>.</p>
-                </div>
-
-                <div class="plan-content" id="planALite">
-                    <p>Details for Plan A Lite: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-
-                <div class="plan-content" id="planC">
-                    <p>Details for Plan C: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-
-                <div class="plan-content" id="planCLite">
-                    <p>Details for Plan C Lite: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-
-                <button class="btn btn-success mt-3">Proceed to customise</button>
-            </div>
-        </div>
+    <div class="col-lg-3">
+        <form class="fs-2">
+            <input type="radio" id="MotorEasy" name="fav_language" value="1" onclick="showContent('content1-bottom-section')">
+            <label for="MotorEasy">MotorEasy Network</label><br>
+            <input type="radio" id="Find" name="fav_language" value="2" onclick="showContent('content2-bottom-section')">
+            <label for="Find">Find My Own Garage</label><br>
+        </form>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <div class="section-bottom content-section-main" id="content1-bottom-section">
+        <!-- First content goes here -->
+        <h2>Content 1: MotorEasy Network</h2>
+        <!-- Additional content can go here -->
+    </div>
+
+    <div class="section-bottom content-section-main" id="content2-bottom-section">
+        <!-- Second content goes here -->
+        <h2>Content 2: Find My Own Garage</h2>
+        <!-- Additional content can go here -->
+    </div>
 
     <script>
-        $(document).ready(function() {
-            $('.plan-btn').click(function() {
-                var planId = $(this).data('plan');
-                $('.plan-content').removeClass('active');
-                $('#' + planId).addClass('active');
-                $('.plan-btn').removeClass('active');
-                $(this).addClass('active');
-            });
+        function showContent(contentId) {
+            var content1 = document.getElementById('content1-bottom-section');
+            var content2 = document.getElementById('content2-bottom-section');
+
+            content1.style.display = 'none';
+            content2.style.display = 'none';
+
+            document.getElementById(contentId).style.display = 'block';
+        }
+
+        // To ensure the default state shows one content, you can trigger it on page load:
+        document.addEventListener('DOMContentLoaded', function() {
+            showContent('content1-bottom-section');
         });
     </script>
 </body>
