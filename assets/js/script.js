@@ -11,12 +11,12 @@ $(document).ready(function () {
             click(1, this)
     });
 
-    ResCarouselSize();
+    ResCarouselSize(); 
 
     // Auto-play functionality
     var autoPlayInterval = setInterval(function () {
         autoPlayCarousel();
-    }, 3000); // 5 seconds
+    }, 5000); // 5 seconds
 
     $(window).resize(function () {
         ResCarouselSize();
@@ -130,3 +130,53 @@ $(document).ready(function () {
 });
 
 
+
+
+//  fouth portion 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".collaspe_button button");
+    const contents = document.querySelectorAll(".content");
+
+    buttons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            buttons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            contents.forEach((content, contentIndex) => {
+                if (contentIndex === index) {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            });
+        });
+    });
+});
+
+
+// side Timer
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                checkboxes.forEach(cb => {
+                    if (cb !== this) cb.checked = false;
+                });
+                updateTimeline();
+            });
+        });
+
+        function updateTimeline() {
+            checkboxes.forEach(checkbox => {
+                const parent = checkbox.parentElement;
+                const circle = parent.querySelector('.circle');
+                if (checkbox.checked) {
+                    circle.classList.add('selected');
+                } else {
+                    circle.classList.remove('selected');
+                }
+            });
+        }
+
+        // Initialize timeline on load
+        document.addEventListener('DOMContentLoaded', updateTimeline);

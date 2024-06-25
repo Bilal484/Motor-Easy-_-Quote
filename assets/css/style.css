@@ -236,7 +236,7 @@
     margin-top: 20px;
     padding: 10px;
 
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
 }
 
 .content-section.active {
@@ -351,6 +351,10 @@
 /* ****************** many_select *************** */
 .many_select {
     margin-top: 20px;
+
+    .set_width {
+        width: 80% !important;
+    }
 
     select {
         border: 1px solid rgb(65, 65, 65);
@@ -680,4 +684,175 @@
 
 .checkpoint-3 {
     left: 100%;
+}
+
+/* Optional_Additions */
+.content-section {
+    .Optional_Additions {
+        /* background-color:#edede7 ; */
+    }
+
+    .second_row {
+        background-color: white;
+        padding: 5px;
+    }
+
+    .id_4_third_row {
+        background-color: white;
+        margin-top: 30px !important;
+        padding: 10px;
+    }
+}
+
+.collapse_sec_row {
+    .collaspe_button {
+        margin-top: 40px !important;
+        margin-bottom: 40px !important;
+
+        button {
+            background-color: #dbdbd5;
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            width: fit-content;
+            color: black;
+        }
+    }
+
+    .content {
+        display: none;
+    }
+
+    .active {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .collapse_call_ids {
+        background-color: white;
+        padding: 10px;
+
+        .btn_combination {
+            button {
+                background-color: #edede7;
+                padding: 15px;
+                border: none;
+                color: black;
+                font-weight: 700;
+                border-radius: 5px;
+            }
+        }
+
+        .thrid_section_of_icon {
+            i {
+                color: #00695c;
+                font-size: 50px;
+            }
+
+        }
+
+        .timeline-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+          
+        }
+
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            flex: 1;
+        }
+
+        .timeline-item .circle {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #009688;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-item .label {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #8d734b;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #009688;
+            z-index: 0;
+        }
+
+        .timeline-item:first-child::before {
+            left: 50%;
+        }
+
+        .timeline-item:last-child::before {
+            right: 50%;
+        }
+
+        .timeline-item.selected .circle {
+            background-color: #009688;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .checkmark {
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .timeline-container {
+                width: 100%;
+            }
+
+            .timeline {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .timeline-item {
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+
+            .timeline-item .label {
+                margin-top: 0;
+                margin-left: 10px;
+            }
+
+            .timeline-item::before {
+                display: none;
+            }
+        }
+
+
+    }
 }
