@@ -13,8 +13,10 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
@@ -141,433 +143,558 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="container-fliud">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="stepper">
-                                <div class="step active" data-target="#content1">
-                                    <div class="step-circle">1</div>
-                                    <div class="step-label">My Motor</div>
-                                </div>
-                                <div class="step" data-target="#content2">
-                                    <div class="step-circle">2</div>
-                                    <div class="step-label">My Info</div>
-                                </div>
-                                <div class="step" data-target="#content3">
-                                    <div class="step-circle">3</div>
-                                    <div class="step-label">My Car Warranty</div>
-                                </div>
-                                <div class="step" data-target="#content4">
-                                    <div class="step-circle">4</div>
-                                    <div class="step-label">My Optional Additions</div>
-                                </div>
-                                <div class="step" data-target="#content5">
-                                    <div class="step-circle">5</div>
-                                    <div class="step-label">Finalise</div>
+                            <div class="container-fliud">
+                                <div class="stepper">
+                                    <div class="step active" data-target="#content1">
+                                        <div class="step-circle">1</div>
+                                        <div class="step-label">My Motor</div>
+                                    </div>
+                                    <div class="step" data-target="#content2">
+                                        <div class="step-circle">2</div>
+                                        <div class="step-label">My Info</div>
+                                    </div>
+                                    <div class="step" data-target="#content3">
+                                        <div class="step-circle">3</div>
+                                        <div class="step-label">My Car Warranty</div>
+                                    </div>
+                                    <div class="step" data-target="#content4">
+                                        <div class="step-circle">4</div>
+                                        <div class="step-label">My Optional Additions</div>
+                                    </div>
+                                    <div class="step" data-target="#content5">
+                                        <div class="step-circle">5</div>
+                                        <div class="step-label">Finalise</div>
+                                    </div>
                                 </div>
                             </div>
-                            <br />
+                            <br>
 
-                            <div id="content1" class="content-section active">
-                                <div class="container_10_field">
-                                    <div class="image">
-                                        <img src="/assets/image/side_image.png" alt="" />
-                                    </div>
-                                    <div class="text">
-                                        <div class="offer">TV OFFER</div>
-                                        <div>
-                                            SAVE <span class="discount">10%</span>
-                                            <span class="new-discount">11%</span>
+                            <div class="container">
+
+                                <div id="content1" class="content-section active">
+                                    <div class="container_10_field">
+                                        <div class="image">
+                                            <img src="/assets/image/side_image.png" alt="">
                                         </div>
-                                        <div class="important">
-                                            IMPORTANT: This offer cannot be used in conjunction with
-                                            any other offer.
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                                <div class="row">
-                                    <div class="col-lg-7  p-4" style="  background-color: #f1f1f1;">
-                                        <div class=" motor_info d-flex justify-content-between align-items-center">
-                                            <h4>My Motor Info</h4>
-                                            <h5>
-                                                <span style="color: #f00">*</span>Mandatory field
-                                            </h5>
-                                        </div>
-                                        <div class="row mt-5 " style="margin-top: 30px !important;">
-                                            <h4 class="">Car Registration</h4>
-                                            <div
-                                                class="col-lg-6 Registration d-flex justify-content-end align-items-center">
-                                                <label for="#"><img src="assets/image/uk.png" alt="" /></label>
-                                                <input type="text" />
+                                        <div class="text">
+                                            <div class="offer">TV OFFER</div>
+                                            <div>SAVE <span class="discount">10%</span> <span
+                                                    class="new-discount">11%</span>
                                             </div>
-                                            <div
-                                                class="col-lg-2 Find_car  d-flex justify-content-end align-items-center">
-                                                <button>Find Car ></button>
+                                            <div class="important">IMPORTANT: This offer cannot be used in conjunction
+                                                with
+                                                any
+                                                other offer.</div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-7  p-4" style="  background-color: #f1f1f1;">
+                                            <div class=" motor_info d-flex justify-content-between align-items-center">
+                                                <h4>My Motor Info</h4>
+                                                <h5><span style="color: #f00;">*</span>Mandatory field</h5>
                                             </div>
-                                            <div class="col-lg-3 ms-3 d-flex justify-content-start flex-column ">
-                                                <h6>Already Have an Account?</h6>
+                                            <div class="row mt-5 " style="margin-top: 30px !important;">
+                                                <h4 class="">Car Registration</h4>
+                                                <div
+                                                    class="col-lg-6 Registration d-flex justify-content-end align-items-center">
+                                                    <label for="#"><img src="assets/image/uk.png" alt=""></label>
+                                                    <input type="text">
+                                                </div>
+                                                <div
+                                                    class="col-lg-2 Find_car  d-flex justify-content-end align-items-center">
+                                                    <button>Find Car ></button>
+                                                </div>
+                                                <div class="col-lg-3 ms-3 d-flex justify-content-start flex-column ">
+                                                    <h6>Already Have an Account?</h6>
+                                                    <a href="javascript:void(0)">
+                                                        <h5 style="color: red;">Sign in Hare</h5>
+                                                    </a>
+                                                </div>
                                                 <a href="javascript:void(0)">
-                                                    <h5 style="color: red">Sign in Hare</h5>
+                                                    <h5 class="mt-5 text-dark">Don't Know Your Registration ? Click here
+                                                    </h5>
                                                 </a>
                                             </div>
-                                            <a href="javascript:void(0)">
-                                                <h5 class="mt-5 text-dark">Don't Know Your Registration ? Click here
-                                                </h5>
-                                            </a>
-                                        </div>
 
-                                        <div class="motor_info mt-5 d-flex justify-content-between align-items-center">
-                                            <h4>My Motor Info</h4>
-                                            <h5>
-                                                <span style="color: #f00">*</span>Mandatory field
-                                            </h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12 many_select">
-                                                <div class="mb-3">
-                                                    <label for="" class="form-label">Make <span>*</span></label>
-                                                    <select class="form-select form-select-lg" name="" id="">
-                                                        <option selected>-Choose-</option>
-                                                        <option value="">Car Warranty</option>
-                                                        <option value="">MOT</option>
-                                                        <option value="">Car Insurance</option>
-                                                    </select>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="" class="form-label">Modle <span>*</span></label>
-                                                    <select class="form-select form-select-lg" name="" id="">
-                                                        <option selected>-Choose-</option>
-                                                        <option value="">Car Warranty</option>
-                                                        <option value="">MOT</option>
-                                                        <option value="">Car Insurance</option>
-                                                    </select>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="" class="form-label">Range <span>*</span></label>
-                                                    <select class="form-select form-select-lg" name="" id="">
-                                                        <option selected>-Choose-</option>
-                                                        <option value="">Car Warranty</option>
-                                                        <option value="">MOT</option>
-                                                        <option value="">Car Insurance</option>
-                                                    </select>
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <label for="#">MOT Expiry Date <span>*</span></label>
-                                                    <input type="date" />
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <label for="#">Date Car Was First Registered
-                                                        <span>*</span></label>
-                                                    <input type="date" />
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <label for="#">Current Estimated Mileage <span>*</span></label>
-                                                    <input type="text" />
-                                                </div>
+                                            <div
+                                                class=" motor_info mt-5 d-flex justify-content-between align-items-center">
+                                                <h4>My Motor Info</h4>
+                                                <h5><span style="color: #f00;">*</span>Mandatory field</h5>
                                             </div>
-                                        </div>
-                                        <div class="text-end mt-5 next_step_info">
-                                            <button>Next Step-my info</button>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12 mt-5 motor_section_end">
-                                                <div class="image_on_text">
-                                                    <h5>“My vision was to create the best Car Warranty for value and
-                                                        service”</h5>
-                                                    <h6>I hope you enjoy!
-                                                    </h6>
-                                                    <p>Duncan McClure Fisher, founder, MotorEasy
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 ">
-                                        <div class="row p-4" style=" background-color: #f1f1f1;">
-                                            <h4><b>Why thousands of UK motorists trust MotorEasy Car Warranty</b></h4>
-                                            <div class="row " style="margin-top: 30px !important;">
-                                                <div class="col-md-6">
-                                                    <div class="feature-item">
-                                                        <div class="feature-icon">#1</div>
-                                                        <div>The UK’s best level of cover</div>
+                                            <div class="row">
+                                                <div class="col-lg-12 many_select">
+                                                    <div class="mb-3">
+                                                        <label for="" class="form-label">Make <span>*</span></label>
+                                                        <select class="form-select form-select-lg" name="" id="">
+                                                            <option selected>-Choose-</option>
+                                                            <option value="">Car Warranty</option>
+                                                            <option value="">MOT</option>
+                                                            <option value="">Car Insurance</option>
+                                                        </select>
                                                     </div>
-                                                    <div class="feature-item">
-                                                        <div class="feature-icon">£</div>
-                                                        <div>
-                                                            Parts, labour and diagnostic costs covered
-                                                        </div>
+                                                    <div class="mb-3">
+                                                        <label for="" class="form-label">Modle <span>*</span></label>
+                                                        <select class="form-select form-select-lg" name="" id="">
+                                                            <option selected>-Choose-</option>
+                                                            <option value="">Car Warranty</option>
+                                                            <option value="">MOT</option>
+                                                            <option value="">Car Insurance</option>
+                                                        </select>
                                                     </div>
-                                                    <div class="feature-item">
-                                                        <div class="feature-icon">⏱️</div>
-                                                        <div>60 days European cover</div>
+                                                    <div class="mb-3">
+                                                        <label for="" class="form-label">Range <span>*</span></label>
+                                                        <select class="form-select form-select-lg" name="" id="">
+                                                            <option selected>-Choose-</option>
+                                                            <option value="">Car Warranty</option>
+                                                            <option value="">MOT</option>
+                                                            <option value="">Car Insurance</option>
+                                                        </select>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="feature-item">
-                                                        <div class="feature-icon">24/7</div>
-                                                        <div>Report repairs 24/7</div>
+                                                    <div class="d-flex flex-column">
+                                                        <label for="#">MOT Expiry Date <span>*</span></label>
+                                                        <input type="date">
                                                     </div>
-                                                    <div class="feature-item">
-                                                        <div class="feature-icon">🔧</div>
-                                                        <div>Repairs handled on your behalf</div>
-                                                    </div>
-                                                    <div class="feature-item">
-                                                        <div class="feature-icon">🌲</div>
-                                                        <div>
-                                                            Costs paid directly at 10,000 MotorEasy network
-                                                            garages
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mt-4">
-                                                <h5><b>Accepted Payment Methods</b></h5>
-                                                <div class="payment-methods">
-                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg"
-                                                        alt="Visa" />
-                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
-                                                        alt="MasterCard">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="content2" class="content-section" style=" background-color: #f1f1f1;">
-                                <div class="row d-flex flex-row">
-                                    <div class="col-lg-7">
-                                        <div class="p-4" style="background-color: white; ">
-                                            <div class="d-flex flex-row justify-content-between">
-                                                <h4 class="text-start">Your data is safe with us 🔏</h4>
-                                                <h4 class="text-end"><b>Bitdefender</b></h4>
-                                            </div>
-                                            <p style="font-size: 14px;">At MotorEasy, we understand that your data's
-                                                security is of utmost
-                                                importance, and we want to assure you that we take every possible
-                                                measure to safeguard your information. Our dedicated team works
-                                                tirelessly to maintain state-of-the-art security, ensuring that your
-                                                data remains protected within our secure systems.</p>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12 many_select"
-                                                style="background-color: white; padding: 10px;">
-                                                <div
-                                                    class=" motor_info mt-5 d-flex justify-content-between align-items-center">
-                                                    <h4>My Info</h4>
-                                                    <h5><span style="color: #f00;">*</span>Mandatory field</h5>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <div class="d-flex justify-content-between">
-                                                        <label for="" class="form-label">Title <span>*</span></label>
-                                                        <i class="fa-regular fa-circle-question mt-5"></i>
-                                                    </div>
-                                                    <select class="form-select form-select-lg" name="" id="">
-                                                        <option selected>-Choose-</option>
-                                                        <option value="">Car Warranty</option>
-                                                        <option value="">MOT</option>
-                                                        <option value="">Car Insurance</option>
-                                                    </select>
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <div class="d-flex justify-content-between">
-                                                        <label for="#">First Name<span>*</span></label>
-                                                        <i class="fa-regular fa-circle-question mt-5"></i>
-                                                    </div>
-                                                    <input type="text" />
-                                                </div>
-
-                                                <div class="d-flex flex-column">
-                                                    <div class="d-flex justify-content-between">
-                                                        <label for="#">Surname<span>*</span></label>
-                                                        <i class="fa-regular fa-circle-question mt-5"></i>
-                                                    </div>
-                                                    <input type="text" />
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <div class="d-flex justify-content-between">
-                                                        <label for="#">Phone Number<span>*</span></label>
-                                                        <i class="fa-regular fa-circle-question mt-5"></i>
-                                                    </div>
-                                                    <input type="text" />
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <div class="d-flex justify-content-between">
-                                                        <label for="#">Email Address<span>*</span></label>
-                                                        <i class="fa-regular fa-circle-question mt-5"></i>
-                                                    </div>
-                                                    <input type="email" />
-                                                </div>
-                                                <hr />
-                                                <div class="mb-3">
-                                                    <div class="d-flex justify-content-between">
-                                                        <label for="" class="form-label">Tell About Us ownership
+                                                    <div class="d-flex flex-column">
+                                                        <label for="#">Date Car Was First Registered
                                                             <span>*</span></label>
-                                                        <i class="fa-regular fa-circle-question mt-5"></i>
+                                                        <input type="date">
                                                     </div>
-                                                    <select class="form-select form-select-lg" name="" id="">
-                                                        <option selected>-Choose-</option>
-                                                        <option value="">Car Warranty</option>
-                                                        <option value="">MOT</option>
-                                                        <option value="">Car Insurance</option>
-                                                    </select>
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <div class="d-flex justify-content-between">
-                                                        <label for="#">When did you buy the car?</label>
-                                                        <!-- <i class="fa-regular fa-circle-question mt-5"></i> -->
+                                                    <div class="d-flex flex-column">
+                                                        <label for="#">Current Estimated Mileage <span>*</span></label>
+                                                        <input type="text">
                                                     </div>
-                                                    <input type="date">
                                                 </div>
-                                                <div class="two_step_button d-flex justify-content-between mt-5">
-                                                    <button class="text-start">Previous step</button>
-                                                    <button class="text-end">Next step -my warrenty</button>
+                                            </div>
+                                            <div class="text-end mt-5 next_step_info">
+                                                <button>Next Step-my info</button>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 mt-5 motor_section_end">
+                                                    <div class="image_on_text">
+                                                        <h5>“My vision was to create the best Car Warranty for value and
+                                                            service”</h5>
+                                                        <h6>I hope you enjoy!
+                                                        </h6>
+                                                        <p>Duncan McClure Fisher, founder, MotorEasy
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-5 ">
-                                        <div class="secssion_image">
-                                            <img src="/assets/image/secssion_2.png" alt="">
-                                        </div>
-                                        <div class="section_number_2 d-flex flex-column">
-                                            <h3 class="p-3" style="box-shadow: 0 1px 5px -2px rgba(0, 0, 0, .3);"><b>The
-                                                    UK's Best Car Warranty</b></h3>
-                                            <div class="col-lg-8 mx-auto Registration d-flex mt-3 align-items-center">
-                                                <label for="#"><img src="assets/image/uk.png" alt=""></label>
-                                                <input type="text">
-                                            </div>
-                                            <div class="row d-flex flex-column " style="margin-top: 20px !important;">
-                                                <h4 class="text-center"><b>ABARTH/FIAT 124 SPIDER MULTIAIR</b></h4>
-                                                <div class=" col-md-8 mx-auto d-flex justify-content-between">
-                                                    <h5><b>MOT Due</b></h5>
-                                                    <h5><b>13/11/2025</b></h5>
+                                        <div class="col-lg-5 ">
+                                            <div class="row p-4" style=" background-color: #f1f1f1;">
+                                                <h4><b>Why thousands of UK motorists trust MotorEasy Car Warranty</b>
+                                                </h4>
+                                                <div class="row " style="margin-top: 30px !important;">
+                                                    <div class="col-md-6">
+                                                        <div class="feature-item">
+                                                            <div class="feature-icon">#1</div>
+                                                            <div>The UK’s best level of cover</div>
+                                                        </div>
+                                                        <div class="feature-item">
+                                                            <div class="feature-icon">£</div>
+                                                            <div>Parts, labour and diagnostic costs covered</div>
+                                                        </div>
+                                                        <div class="feature-item">
+                                                            <div class="feature-icon">⏱️</div>
+                                                            <div>60 days European cover</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="feature-item">
+                                                            <div class="feature-icon">24/7</div>
+                                                            <div>Report repairs 24/7</div>
+                                                        </div>
+                                                        <div class="feature-item">
+                                                            <div class="feature-icon">🔧</div>
+                                                            <div>Repairs handled on your behalf</div>
+                                                        </div>
+                                                        <div class="feature-item">
+                                                            <div class="feature-icon">🌲</div>
+                                                            <div>Costs paid directly at 10,000 MotorEasy network garages
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <hr style="color: black; border: 1px solid black;">
-                                                <div class="col-md-8 mx-auto d-flex justify-content-between">
-                                                    <h5><b>Service Due</b></h5>
-                                                    <h5><b>3/2/2025</b></h5>
+                                                <div class="mt-4">
+                                                    <h5><b>Accepted Payment Methods</b></h5>
+                                                    <div class="payment-methods">
+                                                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg"
+                                                            alt="Visa">
+                                                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
+                                                            alt="MasterCard">
+
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="content3" class="content-section-3">
-                                <div class="main-section-3">
-                                    <div class="container">
-                                        <div class="row h-100">
-                                            <div class="col-lg-8 text-dark d-flex align-items-start justify-content-start flex-column">
-                                                <h1>
-                                                    Choose the best warranty cover for your Alpina -
-                                                    <span> including your 11% saving</span>
-                                                </h1>
-                                                <p>
-                                                    IMPORTANT: This offer cannot be used in conjunction
-                                                    with any other offer.
-                                                </p>
+                                <div id="content2" class="content-section" style=" background-color: #f1f1f1;">
+                                    <div class="row d-flex flex-row">
+                                        <div class="col-lg-7">
+                                            <div class="p-4" style="background-color: white; ">
+                                                <div class="d-flex flex-row justify-content-between">
+                                                    <h4 class="text-start">Your data is safe with us 🔏</h4>
+                                                    <h4 class="text-end"><b>Bitdefender</b></h4>
+                                                </div>
+                                                <p style="font-size: 14px;">At MotorEasy, we understand that your data's
+                                                    security is of utmost
+                                                    importance, and we want to assure you that we take every possible
+                                                    measure to safeguard your information. Our dedicated team works
+                                                    tirelessly to maintain state-of-the-art security, ensuring that your
+                                                    data remains protected within our secure systems.</p>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 many_select"
+                                                    style="background-color: white; padding: 10px;">
+                                                    <div
+                                                        class=" motor_info mt-5 d-flex justify-content-between align-items-center">
+                                                        <h4>My Info</h4>
+                                                        <h5><span style="color: #f00;">*</span>Mandatory field</h5>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <div class="d-flex justify-content-between">
+                                                            <label for="" class="form-label">Title
+                                                                <span>*</span></label>
+                                                            <i class="fa-regular fa-circle-question mt-5"></i>
+                                                        </div>
+                                                        <select class="form-select form-select-lg" name="" id="">
+                                                            <option selected>-Choose-</option>
+                                                            <option value="">Car Warranty</option>
+                                                            <option value="">MOT</option>
+                                                            <option value="">Car Insurance</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="d-flex justify-content-between">
+                                                            <label for="#">First Name<span>*</span></label>
+                                                            <i class="fa-regular fa-circle-question mt-5"></i>
+                                                        </div>
+                                                        <input type="text">
+                                                    </div>
+
+                                                    <div class="d-flex flex-column">
+                                                        <div class="d-flex justify-content-between">
+                                                            <label for="#">Surname<span>*</span></label>
+                                                            <i class="fa-regular fa-circle-question mt-5"></i>
+                                                        </div>
+                                                        <input type="text">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="d-flex justify-content-between">
+                                                            <label for="#">Phone Number<span>*</span></label>
+                                                            <i class="fa-regular fa-circle-question mt-5"></i>
+                                                        </div>
+                                                        <input type="text">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="d-flex justify-content-between">
+                                                            <label for="#">Email Address<span>*</span></label>
+                                                            <i class="fa-regular fa-circle-question mt-5"></i>
+                                                        </div>
+                                                        <input type="email">
+                                                    </div>
+                                                    <hr>
+                                                    <div class="mb-3">
+                                                        <div class="d-flex justify-content-between">
+                                                            <label for="" class="form-label">Tell About Us ownership
+                                                                <span>*</span></label>
+                                                            <i class="fa-regular fa-circle-question mt-5"></i>
+                                                        </div>
+                                                        <select class="form-select form-select-lg" name="" id="">
+                                                            <option selected>-Choose-</option>
+                                                            <option value="">Car Warranty</option>
+                                                            <option value="">MOT</option>
+                                                            <option value="">Car Insurance</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="d-flex justify-content-between">
+                                                            <label for="#">When did you buy the car?</label>
+                                                            <!-- <i class="fa-regular fa-circle-question mt-5"></i> -->
+                                                        </div>
+                                                        <input type="date">
+                                                    </div>
+                                                    <div class="two_step_button d-flex justify-content-between mt-5">
+                                                        <button class="text-start">Previous step</button>
+                                                        <button class="text-end">Next step -my warrenty</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 ">
+                                            <div class="secssion_image">
+                                                <img src="/assets/image/secssion_2.png" alt="">
+                                            </div>
+                                            <div class="section_number_2 d-flex flex-column">
+                                                <h3 class="p-3" style="box-shadow: 0 1px 5px -2px rgba(0, 0, 0, .3);">
+                                                    <b>The
+                                                        UK's Best Car Warranty</b>
+                                                </h3>
+                                                <div
+                                                    class="col-lg-8 mx-auto Registration d-flex mt-3 align-items-center">
+                                                    <label for="#"><img src="assets/image/uk.png" alt=""></label>
+                                                    <input type="text">
+                                                </div>
+                                                <div class="row d-flex flex-column "
+                                                    style="margin-top: 20px !important;">
+                                                    <h4 class="text-center"><b>ABARTH/FIAT 124 SPIDER MULTIAIR</b></h4>
+                                                    <div class=" col-md-8 mx-auto d-flex justify-content-between">
+                                                        <h5><b>MOT Due</b></h5>
+                                                        <h5><b>13/11/2025</b></h5>
+                                                    </div>
+                                                    <hr style="color: black; border: 1px solid black;">
+                                                    <div class="col-md-8 mx-auto d-flex justify-content-between">
+                                                        <h5><b>Service Due</b></h5>
+                                                        <h5><b>3/2/2025</b></h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+
+                                    </div>
+                                </div>
+                                <div id="content3" class="content-section-3">
+
+                                </div>
+                                <div id="content4" class="content-section">
+                                    <div class="container g-0 mt-4">
+                                        <div class="row ">
+
+                                            <div class="col-md-6">
+                                                Due on 30/1/2024 – book today to reserve a space!
+                                            </div>
+                                            <div class="col-md-5 text-end">
+                                                <button class="btn btn-primary">Add to basket</button>
+                                                <button type="button" class="btn btn-info" data-toggle="collapse"
+                                                    data-target="#demo">Learn More</button>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div id="demo" class="collapse">
+                                                    <div class="row">
+                                                        <div class="col-lg-8">
+                                                            <p>
+                                                                Our MOT's start from just £39.99. Workshops are allowed
+                                                                by the DVSA, who govern MOT tests, to charge you up to
+                                                                £54.85 for your annual MOT test. So that's a saving of
+                                                                up to £14.85!
+                                                            </p>
+                                                            <div class="d-flex flex-row icon_sections">
+                                                                <i class="fas fa-key"></i>
+                                                                <h4><b>Select a top performing workshop close to your
+                                                                        work or home
+                                                                    </b></h4>
+                                                            </div>
+                                                            <div class="d-flex flex-row mt-5 icon_sections">
+                                                                <i class="fa-solid fa-thumbs-up"></i>
+                                                                <h4><b>Check your MOT result is fair
+                                                                    </b></h4>
+                                                            </div>ٖ
+                                                            <div class="d-flex flex-row mt-5 icon_sections">
+                                                                <i class="fa-solid fa-comment-dots"></i>
+                                                                <h4><b>Negotiate labour times and parts prices on any
+                                                                        repairs required
+                                                                    </b></h4>
+                                                            </div>ٖ
+                                                            <div class="d-flex flex-row mt-2 icon_sections">
+                                                                <h5>All work is guaranteed for 12 months. If you have a
+                                                                    car warranty we’ll seek authority for repairs to be
+                                                                    covered. We deal with any workshop problems, so you
+                                                                    don't have to.
+                                                                </h5>
+                                                            </div>ٖ
+                                                            <div>
+                                                                <h4><b>What's included:</b></h4>
+                                                            </div>
+                                                            <div class="d-flex flex-row mt-5 icon_sections">
+                                                                <i class="fa-solid fa-car-side"></i>
+                                                                <h4><b>Official DVSA MOT test
+                                                                    </b></h4>
+                                                            </div>ٖ
+                                                            <div class="d-flex flex-row mt-3 icon_sections">
+                                                                <i class="fa-solid fa-rotate-right"></i>
+                                                                <h4><b>Free retest if required
+                                                                    </b></h4>
+                                                            </div>ٖ
+                                                        </div>
+                                                    </div>
+                                                    <hr style="border: 1px solid black;">
+                                                    <div class="col-lg-12">
+                                                        <h4><b>Customise Your Booking</b></h4>
+                                                        <div class="row d-flex flex-column">
+                                                            <div class="col-lg-4 d-flex flex-column">
+                                                                <div class="d-flex mt-2 justify-content-between">
+                                                                    <label for="#">Booking Date</label>
+                                                                    <!-- <i class="fa-regular fa-circle-question mt-5"></i> -->
+                                                                </div>
+                                                                <input class="mb-5" type="date">
+                                                            </div>
+                                                            <h5 class="mt-1 mb-3">The further away your MOT is, the more
+                                                                months you can spread
+                                                                payments over.</h5>
+                                                        </div>
+                                                    </div>
+                                                    <hr style="border: 1px solid black;">
+                                                    <div class="col-lg-8 d-flex flex-row icons_set_payment">
+                                                        <i class="fa-solid fa-calendar-days mt-4"></i>
+                                                        <div class="">
+                                                            <h5><b>Payment options</b></h5>
+                                                            <h6>Reserve booking in at least two months in advance to
+                                                                unlock option to pay in instalments.</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 mt-5">
+                                                        <h6 class="mb-4">You can change all the details nearer the time,
+                                                            but to
+                                                            reserve the best workshop in advance for you, it helps if
+                                                            you set an initial date now and confirm the address you want
+                                                            the workshop to be near.</h6>
+                                                        <P class="mt-4"><b>Enter Postcode You Need The Workshop Close
+                                                                To</b></P>
+                                                        <div class="looup_input">
+                                                            <input type="text" placeholder="Enter Your Postcode ">
+                                                            <button>Lookup</button>
+                                                        </div>
+                                                        <div class="mt-5">
+                                                            <p><strong>Optional</strong> - Please add any comments or
+                                                                notes that you like to make us aware of.</p>
+                                                            <div class="mb-2">
+                                                                <label for="" class="form-label"></label>
+                                                                <textarea class="form-control" name="" id=""
+                                                                    rows="10"></textarea>
+                                                            </div>
+                                                            <p><span style="color: red;">*</span> price might be
+                                                                adjusted based on your workshop
+                                                                selection</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="container mt-5">
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-primary"
+                                                    data-bs-target="#content1">£36.30</button>
+                                                <button type="button" class="btn btn-primary"
+                                                    data-bs-target="#content2">£53.56</button>
+                                                <button type="button" class="btn btn-primary"
+                                                    data-bs-target="#content3">£67.66</button>
+                                                <button type="button" class="btn btn-primary"
+                                                    data-bs-target="#content4">£102.36</button>
+                                            </div>
+
+                                            <div class="tab-content mt-4">
+                                                <div id="content1" class="tab-pane active">
+                                                    <div class="container mt-5 container-custom">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="section-title">Relax with 24/7 roadside
+                                                                    assistance – for help when you need it
+                                                                    with nationwide recovery and assistance at home
+                                                                </div>
+                                                                <div class="section-subtitle">Get back on your way
+                                                                    quickly, with 80% of failures repaired at
+                                                                    the roadside.</div>
+                                                                <div class="section-subtitle">Our nationwide and home
+                                                                    assist level of breakdown cover,
+                                                                    protects your vehicle for faults and recovery
+                                                                    anywhere in the UK.</div>
+                                                                <button class="btn btn-custom me-2">Breakdown cover
+                                                                    document</button>
+                                                                <button class="btn btn-custom">Insurance Product
+                                                                    Information Document (IPID)</button>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="d-flex align-items-center">
+                                                                    <i class="icon bi bi-clock-history me-3"></i>
+                                                                    <div>
+                                                                        <div class="option-title">Duration</div>
+                                                                        <div class="option-description">How long are you
+                                                                            looking to keep the car?</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 ">
+                                                                <div class="progress-container">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar" role="progressbar"
+                                                                            style="width: 33%;" aria-valuenow="33"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                    <div class="checkpoint checkpoint-1">
+                                                                        <div class="circle">1</div>
+                                                                        <div>12 months</div>
+                                                                    </div>
+                                                                    <div class="checkpoint checkpoint-2">
+                                                                        <div class="circle">2</div>
+                                                                        <div>24 months</div>
+                                                                    </div>
+                                                                    <div class="checkpoint checkpoint-3">
+                                                                        <div class="circle">3</div>
+                                                                        <div>36 months</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="d-flex align-items-center">
+                                                                    <i class="icon bi bi-calendar3 me-3"></i>
+                                                                    <div>
+                                                                        <div class="option-title">Start Date</div>
+                                                                        <div class="option-description">Choose the date
+                                                                            when you would like your breakdown
+                                                                            cover to start.</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="date-picker">
+                                                                    <input type="date" class="form-control"
+                                                                        value="2024-06-25">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div id="content2" class="tab-pane">
+                                                    <!-- Content 2 goes here -->
+                                                    <p>Content for button 2</p>
+                                                </div>
+                                                <div id="content3" class="tab-pane">
+                                                    <!-- Content 3 goes here -->
+                                                    <p>Content for button 3</p>
+                                                </div>
+                                                <div id="content4" class="tab-pane">
+                                                    <!-- Content 4 goes here -->
+                                                    <p>Content for button 4</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <h3 class="fw-bold">Choose a plan to suit you below:</h3> -->
-                                <div class="collapse-section">
-                                    <div class="container mt-5">
-                                        <h2>Choose a plan to suit you below:</h2>
-                                        <div class="row mb-3">
-                                            <div class="col-md-3">
-                                                <div class="plan-btn card text-center" data-plan="planA">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Plan A</h5>
-                                                        <p class="card-text"><span class="text-danger">£36.44</span> <small class="text-muted"><del>£40.94</del></small></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="plan-btn card text-center" data-plan="planALite">
-                                                    <div class="card-body">
-                                                        <h2 class="card-title">Plan A Lite</h2>
-                                                        <p class="card-text"><span class="text-danger">£21.56</span> <small class="text-muted"><del>£24.22</del></small></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="plan-btn card text-center" data-plan="planC">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Plan C</h5>
-                                                        <p class="card-text"><span class="text-danger">£32.22</span> <small class="text-muted"><del>£36.20</del></small></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="plan-btn card text-center" data-plan="planCLite">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Plan C Lite</h5>
-                                                        <p class="card-text"><span class="text-danger">£19.91</span> <small class="text-muted"><del>£22.37</del></small></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                        
-                                        <div class="plan-content active" id="planA">
-                                            
-                                           <h2> <span>Our Most Popular Plan! <br></span> Specifically designed to cover cars three years and older, or coming out of manufacturer’s guarantee
-
-                                        </h2>
-                                        <p>Our top level of car warranty cover for your 2022 HONDA JAZZ EX I-MMD CVT.
-                                        </p>
-                                        <p>World’s first EV warranty including drive battery protection
-                                        </p>
-                                        <p>Make sure you protect the critical - and expensive - drivetrain components of your electric car, including electric motors and drive battery. Select "Summary of Cover" for a complete list of covered areas.
-                                        </p>
-                                        <p class="fw-bold">Covers failures, no matter where they happen
-                                        </p>
-                                        <p>At home, on the road, or during an MOT or service.
-                                        </p>
-                                        <p class="fw-bold">Buy today for immediate protection
-                                        </p>
-                                        <p>If you need repairs report them 24/7 via your MotorEasy account and we’ll do the rest.
-                                        </p>
-                                        <p class="fw-bold">Flexible cover
-
-                                        </p>
-                                        <p>If you need repairs report them 24/7 via your <a href="#">MotorEasy account</a> and we’ll do the rest.
-                                        </p>
-                                        </div>
-                        
-                                        <div class="plan-content" id="planALite">
-                                            <p>Details for Plan A Lite: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                        </div>
-                        
-                                        <div class="plan-content" id="planC">
-                                            <p>Details for Plan C: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                        </div>
-                        
-                                        <div class="plan-content" id="planCLite">
-                                            <p>Details for Plan C Lite: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                        </div>
-                        
-                                        <button class="btn btn-success mt-3">Proceed to customise</button>
-                                    </div>
+                                <div id="content5" class="content-section">
+                                    <p>Content for Finalise</p>
                                 </div>
-                            </div>
-                            <div id="content4" class="content-section">
-                                <div class="container mt-4">
-                                    <div class="row text-center">
 
-                                        <div class="col-md-6">
-                                            Due on 30/1/2024 – book today to reserve a space!
-                                        </div>
-                                        <div class="col-md-6 text-end">
-                                            <button class="btn btn-primary">Add to basket</button>
-                                            <button class="btn btn-primary">Learn More</button>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="content5" class="content-section">
-                                <p>Content for Finalise</p>
                             </div>
                         </div>
                     </div>
@@ -582,13 +709,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+        </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+        </script>
 
     <script src="/assets/js/script.js"></script>
     <script>
