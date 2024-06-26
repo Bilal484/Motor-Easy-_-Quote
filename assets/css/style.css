@@ -7,7 +7,7 @@
 .container {
     margin: 0px;
     padding: 0px;
-    gap: 0px;
+
 }
 
 .row {
@@ -901,6 +901,7 @@
     }
 }
 
+/* ================================ sectin 5 =============================== */
 .fifth_portion {
     background-color: #edede7;
 
@@ -908,8 +909,115 @@
         padding: 10px;
         background-color: white;
     }
-}
 
+    .container {
+        width: 950px;
+    }
+
+    .vehicle-table {
+        width: 100%;
+        margin: 20px 0;
+        /* background-color: white; */
+    }
+
+    .vehicle-table th,
+    .vehicle-table td {
+        border: none;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .vehicle-table th {
+        width: 25%;
+        font-weight: 400;
+    }
+
+    .vehicle-table td {
+        width: 75%;
+        font-weight: 700;
+        /* margin-right: 20px; */
+    }
+
+    .table-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .btn-custom {
+        margin-top: 20px;
+        display: block;
+    }
+
+    .btn-custom-personal {
+        margin-top: 52px;
+    }
+
+    #demo {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    #demo.show {
+        max-height: 1250px;
+        /* Adjust as needed */
+    }
+
+    #demo .row ul li {
+        list-style: none;
+        font-weight: 500;
+    }
+
+    .car_warrarnty {
+        button {
+            border: none;
+            outline: none;
+            background: grey;
+            border-radius: 4px;
+            font-weight: 500;
+            color: white;
+        }
+    }
+
+    .input-section input {
+        width: 50%;
+        font-size: 24px;
+        margin-top: 10px;
+
+    }
+
+    .input-section button {
+        border: none;
+        border-radius: 5px;
+    }
+
+    .terms {
+        p {
+            background: #F0EADB;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+    }
+
+    .terms-and-conditions {
+        height: 400px;
+        overflow-y: auto;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    ul{
+        li{
+            list-style: none;
+            line-height: 25px;
+            font-weight: bold;
+
+        }
+    }
+}
 
 
 
@@ -1152,79 +1260,3 @@ footer {
 }
 
 /* =============================== Section 5 ===================  */
-.fifth_portion {
-    background-color: #edede7;
-
-    p {
-        padding: 10px;
-        background-color: white;
-    }
-
-    .vehicle-table {
-        width: 100%;
-        margin: 20px 0;
-        /* background-color: white; */
-    }
-
-    .vehicle-table th,
-    .vehicle-table td {
-        border: none;
-        padding: 10px;
-        text-align: left;
-    }
-
-    .vehicle-table th {
-        width: 25%;
-        font-weight: 400;
-    }
-
-    .vehicle-table td {
-        width: 75%;
-        font-weight: 700;
-        /* margin-right: 20px; */
-    }
-
-    .table-container {
-        max-width: 600px;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-    }
-
-    .btn-custom {
-        margin-top: 20px;
-        display: block;
-    }
-
-    .btn-custom-personal {
-        margin-top: 52px;
-    }
-
-    #demo {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-    }
-
-    #demo.show {
-        max-height: 1250px;
-        /* Adjust as needed */
-    }
-
-    #demo .row ul li {
-        list-style: none;
-        font-weight: 500;
-    }
-
-    .car_warrarnty {
-        button {
-            border: none;
-            outline: none;
-            background: grey;
-            border-radius: 4px;
-            font-weight: 500;
-            color: white;
-        }
-    }
-}
