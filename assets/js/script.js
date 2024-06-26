@@ -1,43 +1,21 @@
 $(document).ready(function () {
-    var itemsMainDiv = ('.MultiCarousel');
-    var itemsDiv = ('.MultiCarousel-inner');
+    var itemsMainDiv = ".MultiCarousel";
+    var itemsDiv = ".MultiCarousel-inner";
     var itemWidth = "";
 
-    $('.leftLst, .rightLst').click(function () {
+    $(".leftLst, .rightLst").click(function () {
         var condition = $(this).hasClass("leftLst");
-        if (condition)
-            click(0, this);
-        else
-            click(1, this)
+        if (condition) click(0, this);
+        else click(1, this);
     });
 
+    ResCarouselSize();
     ResCarouselSize();
 
     // Auto-play functionality
     var autoPlayInterval = setInterval(function () {
         autoPlayCarousel();
     }, 5000); // 5 seconds
-
-    $(window).resize(function () {
-        ResCarouselSize();
-    });
-
-    // This function defines the size of the items
-    function ResCarouselSize() {
-        var incno = 0;
-        var dataItems = ("data-items");
-        var itemClass = ('.item');
-        var id = 0;
-        var btnParentSb = '';
-        var itemsSplit = '';
-        var sampwidth = $(itemsMainDiv).width();
-        var bodyWidth = $('body').width();
-        $(itemsDiv).each(function () {
-            id = id + 1;
-            var itemNumbers = $(this).find(itemClass).length;
-            btnParentSb = $(this).parent().attr(dataItems);
-            itemsSplit = btnParentSb.split(',');
-            $(this).parent().attr("id", "MultiCarousel" + id);
 
             if (bodyWidth >= 1200) {
                 incno = itemsSplit[3];
@@ -60,22 +38,22 @@ $(document).ready(function () {
                 $(this).outerWidth(itemWidth);
             });
 
-            $(".leftLst").addClass("over");
-            $(".rightLst").removeClass("over");
-        });
-    }
+    $(".leftLst").addClass("over");
+    $(".rightLst").removeClass("over");
+});
+  
 
-    // This function is used to move the items
-    function ResCarousel(e, el, s) {
-        var leftBtn = ('.leftLst');
-        var rightBtn = ('.rightLst');
-        var translateXval = '';
-        var divStyle = $(el + ' ' + itemsDiv).css('transform');
-        var values = divStyle.match(/-?[\d\.]+/g);
-        var xds = Math.abs(values[4]);
-        if (e == 0) {
-            translateXval = parseInt(xds) - parseInt(itemWidth * s);
-            $(el + ' ' + rightBtn).removeClass("over");
+// This function is used to move the items
+function ResCarousel(e, el, s) {
+    var leftBtn = ".leftLst";
+    var rightBtn = ".rightLst";
+    var translateXval = "";
+    var divStyle = $(el + " " + itemsDiv).css("transform");
+    var values = divStyle.match(/-?[\d\.]+/g);
+    var xds = Math.abs(values[4]);
+    if (e == 0) {
+        translateXval = parseInt(xds) - parseInt(itemWidth * s);
+        $(el + " " + rightBtn).removeClass("over");
 
             if (translateXval <= itemWidth / 2) {
                 translateXval = 0;
@@ -86,53 +64,78 @@ $(document).ready(function () {
             translateXval = parseInt(xds) + parseInt(itemWidth * s);
             $(el + ' ' + leftBtn).removeClass("over");
 
-            if (translateXval >= itemsCondition - itemWidth / 2) {
-                translateXval = itemsCondition;
-                $(el + ' ' + rightBtn).addClass("over");
-            }
+        if (translateXval >= itemsCondition - itemWidth / 2) {
+            translateXval = itemsCondition;
+            $(el + " " + rightBtn).addClass("over");
         }
-        $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
     }
+    $(el + " " + itemsDiv).css(
+        "transform",
+        "translateX(" + -translateXval + "px)"
+    );
+}
 
-    // This function is used to get some elements from btn
-    function click(ell, ee) {
-        var Parent = "#" + $(ee).parent().attr("id");
-        var slide = $(Parent).attr("data-slide");
-        ResCarousel(ell, Parent, slide);
-    }
+// This function is used to get some elements from btn
+function click(ell, ee) {
+    var Parent = "#" + $(ee).parent().attr("id");
+    var slide = $(Parent).attr("data-slide");
+    ResCarousel(ell, Parent, slide);
+}
 
-    // This function is used for autoplay
-    function autoPlayCarousel() {
-        $('.MultiCarousel').each(function () {
-            var rightBtn = $(this).find('.rightLst');
-            click(1, rightBtn);
-        });
-    }
-});
+// This function is used for autoplay
+function autoPlayCarousel() {
+    $(".MultiCarousel").each(function () {
+        var rightBtn = $(this).find(".rightLst");
+        click(1, rightBtn);
+    });
+}
 
 
 // /////////////////////   Indicator
 $(document).ready(function () {
-    $('.step').click(function () {
+    $(".step").click(function () {
         // Remove 'active' class from all steps and content sections
-        $('.step').removeClass('active');
-        $('.content-section').removeClass('active');
+        $(".step").removeClass("active");
+        $(".content-section").removeClass("active");
 
         // Add 'active' class to the clicked step and its content section
-        $(this).addClass('active');
-        var target = $(this).data('target');
-        $(target).addClass('active');
+        $(this).addClass("active");
+        var target = $(this).data("target");
+        $(target).addClass("active");
     });
 
     // Optionally, trigger the first step on page load
-    $('.step').first().click();
+    $(".step").first().click();
 });
 
+//
+$(document).ready(function () {
+    $(".plan-btn").click(function () {
+        var planId = $(this).data("plan");
+        $(".plan-content").removeClass("active");
+        $("#" + planId).addClass("active");
+        $(".plan-btn").removeClass("active");
+        $(this).addClass("active");
+    });
+});
 
+function showContent(contentId) {
+    var content1 = document.getElementById("content1-bottom-section");
+    var content2 = document.getElementById("content2-bottom-section");
 
+    content1.style.display = "none";
+    content2.style.display = "none";
+    document.getElementById(contentId).style.display = "block";
+}
+
+// To ensure the default state shows one content, you can trigger it on page load:
+document.addEventListener("DOMContentLoaded", function () {
+    showContent("content1-bottom-section");
+});
 
 //  fouth portion 
 
+document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".collaspe_button button");
     const contents = document.querySelectorAll(".content");
@@ -164,6 +167,14 @@ checkboxes.forEach(checkbox => {
         updateTimeline();
     });
 });
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function () {
+        checkboxes.forEach(cb => {
+            if (cb !== this) cb.checked = false;
+        });
+        updateTimeline();
+    });
+});
 
 function updateTimeline() {
     checkboxes.forEach(checkbox => {
@@ -176,7 +187,20 @@ function updateTimeline() {
         }
     });
 }
+function updateTimeline() {
+    checkboxes.forEach(checkbox => {
+        const parent = checkbox.parentElement;
+        const circle = parent.querySelector('.circle');
+        if (checkbox.checked) {
+            circle.classList.add('selected');
+        } else {
+            circle.classList.remove('selected');
+        }
+    });
+}
 
+// Initialize timeline on load
+document.addEventListener('DOMContentLoaded', updateTimeline);
 // Initialize timeline on load
 document.addEventListener('DOMContentLoaded', updateTimeline);
 
