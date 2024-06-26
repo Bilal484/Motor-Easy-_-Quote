@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Timeline Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+
+.timeline-item .circle {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #009688;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-item .label {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #8d734b;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #009688;
+    z-index: 0;
+}
+
+.timeline-item:first-child::before {
+    left: 50%;
+}
+
+.timeline-item:last-child::before {
+    right: 50%;
+}
+
+.timeline-item.selected .circle {
+    background-color: #009688;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.checkmark {
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .timeline-container {
+        width: 100%;
+    }
+
+    .timeline {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .timeline-item {
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .timeline-item .label {
+        margin-top: 0;
+        margin-left: 10px;
+    }
+
+    .timeline-item::before {
+        display: none;
+    }
+}
+
+</style>
+<body>
+    
+    <div class="timeline-container">
+        <div class="timeline">
+            <label class="timeline-item">
+                <input type="checkbox" name="duration" value="12">
+                <div class="circle"></div>
+                <div class="label">12 months</div>
+            </label>
+            <label class="timeline-item">
+                <input type="checkbox" name="duration" value="24">
+                <div class="circle"></div>
+                <div class="label">24 months</div>
+            </label>
+            <label class="timeline-item">
+                <input type="checkbox" name="duration" value="36" checked>
+                <div class="circle"><i class="checkmark">✔</i></div>
+                <div class="label">36 months</div>
+            </label>
+        </div>
+    </div>
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                checkboxes.forEach(cb => {
+                    if (cb !== this) cb.checked = false;
+                });
+                updateTimeline();
+            });
+        });
+
+        function updateTimeline() {
+            checkboxes.forEach(checkbox => {
+                const parent = checkbox.parentElement;
+                const circle = parent.querySelector('.circle');
+                if (checkbox.checked) {
+                    circle.classList.add('selected');
+                } else {
+                    circle.classList.remove('selected');
+                }
+            });
+        }
+
+        // Initialize timeline on load
+        document.addEventListener('DOMContentLoaded', updateTimeline);
+    </script>
+</body>
+</html>
