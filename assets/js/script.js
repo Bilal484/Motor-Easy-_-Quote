@@ -11,7 +11,7 @@ $(document).ready(function () {
             click(1, this)
     });
 
-    ResCarouselSize(); 
+    ResCarouselSize();
 
     // Auto-play functionality
     var autoPlayInterval = setInterval(function () {
@@ -42,20 +42,20 @@ $(document).ready(function () {
             if (bodyWidth >= 1200) {
                 incno = itemsSplit[3];
                 itemWidth = sampwidth / incno;
-            }
-            else if (bodyWidth >= 992) {
+            } else if (bodyWidth >= 992) {
                 incno = itemsSplit[2];
                 itemWidth = sampwidth / incno;
-            }
-            else if (bodyWidth >= 768) {
+            } else if (bodyWidth >= 768) {
                 incno = itemsSplit[1];
                 itemWidth = sampwidth / incno;
-            }
-            else {
+            } else {
                 incno = itemsSplit[0];
                 itemWidth = sampwidth / incno;
             }
-            $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+            $(this).css({
+                'transform': 'translateX(0px)',
+                'width': itemWidth * itemNumbers
+            });
             $(this).find(itemClass).each(function () {
                 $(this).outerWidth(itemWidth);
             });
@@ -81,8 +81,7 @@ $(document).ready(function () {
                 translateXval = 0;
                 $(el + ' ' + leftBtn).addClass("over");
             }
-        }
-        else if (e == 1) {
+        } else if (e == 1) {
             var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
             translateXval = parseInt(xds) + parseInt(itemWidth * s);
             $(el + ' ' + leftBtn).removeClass("over");
@@ -134,7 +133,7 @@ $(document).ready(function () {
 
 //  fouth portion 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".collaspe_button button");
     const contents = document.querySelectorAll(".content");
 
@@ -157,26 +156,54 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // side Timer
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                checkboxes.forEach(cb => {
-                    if (cb !== this) cb.checked = false;
-                });
-                updateTimeline();
-            });
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function () {
+        checkboxes.forEach(cb => {
+            if (cb !== this) cb.checked = false;
         });
+        updateTimeline();
+    });
+});
 
-        function updateTimeline() {
-            checkboxes.forEach(checkbox => {
-                const parent = checkbox.parentElement;
-                const circle = parent.querySelector('.circle');
-                if (checkbox.checked) {
-                    circle.classList.add('selected');
-                } else {
-                    circle.classList.remove('selected');
-                }
-            });
+function updateTimeline() {
+    checkboxes.forEach(checkbox => {
+        const parent = checkbox.parentElement;
+        const circle = parent.querySelector('.circle');
+        if (checkbox.checked) {
+            circle.classList.add('selected');
+        } else {
+            circle.classList.remove('selected');
         }
+    });
+}
 
-        // Initialize timeline on load
-        document.addEventListener('DOMContentLoaded', updateTimeline);
+// Initialize timeline on load
+document.addEventListener('DOMContentLoaded', updateTimeline);
+
+
+// ==================================== section 3 
+
+
+function showContent(contentId) {
+    var content1 = document.getElementById('content1-bottom-section');
+    var content2 = document.getElementById('content2-bottom-section');
+
+    content1.style.display = 'none';
+    content2.style.display = 'none';
+
+    document.getElementById(contentId).style.display = 'block';
+}
+
+// To ensure the default state shows one content, you can trigger it on page load:
+document.addEventListener('DOMContentLoaded', function () {
+    showContent('content1-bottom-section');
+});
+document.querySelectorAll('.plan-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        const planId = this.getAttribute('data-plan');
+        document.querySelectorAll('.plan-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        document.getElementById(planId).classList.add('active');
+    });
+});
